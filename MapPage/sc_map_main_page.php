@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Live Demo of Google Maps Geocoding Example with PHP</title>
+    <title>Scudsbook</title>
 
     <style>
         body{
@@ -35,6 +35,9 @@
 <?php
 if($_POST){
 
+    include_once ('../Database/Database_Connection.php');
+    $databaseConnection = new Database_Connection();
+    $databaseConnection->createDatabase();
     // get latitude, longitude and formatted address
     $data_arr = geocode($_POST['searchbox']);
 
