@@ -59,7 +59,7 @@ class Database_Connection
             }
             $scudsbook_store_info = mysqli_query($this->conn, "describe scudsbook_store_info");
             if (!$scudsbook_store_info) {
-                mysqli_query($this->conn, "create table scudsbook_store_info(store_name varchar(100) primary key NOT NULL, store_rating varchar(10),
+                mysqli_query($this->conn, "create table scudsbook_store_info(store_name varchar(100) primary key NOT NULL, store_rating varchar(10), store_category varchar(10),
                                 store_location_lat varchar(20) NOT NULL, store_location_lan varchar(20) ,address_street varchar(100), address_ref varchar(50),
                                 address_city varchar(50),address_state char(50), address_zip varchar(30), address_country char(50))");
             }
@@ -115,7 +115,20 @@ class Database_Connection
         }
     }
 
-    public function addStoreInfo($_store_name, $_store_rating,
+    /**
+     * add Store information table
+     * @param $_store_name
+     * @param $_store_rating
+     * @param $_store_location_lat
+     * @param $_store_location_lan
+     * @param $_default_address_street
+     * @param $_default_address_ref
+     * @param $_default_address_city
+     * @param $_default_address_state
+     * @param $_default_address_zip
+     * @param $_default_address_country
+     */
+    public function addStoreInfo($_store_name, $_store_rating, $_store_category,
                                  $_store_location_lat, $_store_location_lan, $_default_address_street, $_default_address_ref, $_default_address_city, $_default_address_state,
                                  $_default_address_zip, $_default_address_country)
     {
@@ -131,8 +144,8 @@ class Database_Connection
             echo "<script>window.alert(\"Store name " . $_store_name . " already exist, try again!\"),location.href=\"..\userAdd.html\";</script>";
             exit;
         } else {
-            $sql = "INSERT INTO userInfo(store_name, store_rating, store_location_lat, store_location_lan, default_address_street, default_address_ref, default_address_city,
-                default_address_state, default_address_zip, default_address_country) VALUES('$_store_name', '$_store_rating','$_store_location_lat', '$_store_location_lan',
+            $sql = "INSERT INTO userInfo(store_name, store_rating, store_category, store_location_lat, store_location_lan, default_address_street, default_address_ref, default_address_city,
+                default_address_state, default_address_zip, default_address_country) VALUES('$_store_name', '$_store_rating','$_store_category','$_store_location_lat', '$_store_location_lan',
                 '$_default_address_street', '$_default_address_ref', '$_default_address_city', '$_default_address_state', '$_default_address_zip', '$_default_address_country')";
             $result = mysqli_query($sql);
             echo "<script>window.alert(\"User Added!\"),location.href=\"userLogin.html\";</script>";
