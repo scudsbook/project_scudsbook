@@ -31,7 +31,6 @@ class Database_Connection
             exit;
         } else {
             $this->conn_state = true;
-            echo "Connected successfully";
         }
 
         $er = mysqli_select_db($this->conn, $this->_database_name);
@@ -64,6 +63,7 @@ class Database_Connection
                                 address_city varchar(50),address_state char(50), address_zip varchar(30), address_country char(50))");
             }
             mysqli_close($this->conn);
+            $this->conn_state=false;
         }
     }
 
@@ -109,10 +109,12 @@ class Database_Connection
         } else {
             $sql = "INSERT INTO userInfo(userName, password,password_re, address_street, address_ref, address_city, address_state, address_zip, address_country,
                  user_boa, user_phone) VALUES('$_userName', '$_password','$_password_re', '$_address_street', '$_address_ref', '$_address_city', '$_address_state',
-                 '$_address_zip', '$_address_country', '$_user_boa', '$_user_phone')";
+                 '$_address_zip', '$_address_country', '$_user_boa', '$_user_phone');";
             $result = mysqli_query($sql);
             echo "<script>window.alert(\"User Added!\"),location.href=\"userLogin.html\";</script>";
         }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
     }
 
     /**
@@ -141,14 +143,88 @@ class Database_Connection
         $result = mysqli_query($this->conn, $sql);
         $rows = mysqli_num_rows($result);
         if ($rows) {
-            echo "<script>window.alert(\"Store name " . $_store_name . " already exist, try again!\"),location.href=\"..\userAdd.html\";</script>";
+            echo "Store name ". $_store_name . " already exist, try again!";
             exit;
         } else {
-            $sql = "INSERT INTO userInfo(store_name, store_rating, store_category, store_location_lat, store_location_lan, default_address_street, default_address_ref, default_address_city,
-                default_address_state, default_address_zip, default_address_country) VALUES('$_store_name', '$_store_rating','$_store_category','$_store_location_lat', '$_store_location_lan',
-                '$_default_address_street', '$_default_address_ref', '$_default_address_city', '$_default_address_state', '$_default_address_zip', '$_default_address_country')";
-            $result = mysqli_query($sql);
-            echo "<script>window.alert(\"User Added!\"),location.href=\"userLogin.html\";</script>";
+            $sql = "INSERT INTO scudsbook_store_info (store_name, store_rating, store_category,
+                                store_location_lat, store_location_lan,address_street, address_ref,
+                                address_city,address_state, address_zip, address_country) VALUES ('$_store_name', '$_store_rating','$_store_category','$_store_location_lat', '$_store_location_lan',
+                '$_default_address_street', '$_default_address_ref', '$_default_address_city', '$_default_address_state', '$_default_address_zip', '$_default_address_country');";
+            $result = mysqli_query($this->conn, $sql);
+
+            if($result)
+                echo "New Store information Added!";
         }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
     }
+
+    /**
+     * update store rating
+     *
+     * @param $_store_name
+     * @param $_store_rating
+     */
+    public function updateStoreInfo_rating($_store_name, $_store_rating)
+    {
+        $this->databaseConnect();
+        if ($_store_name == NULL) {
+            echo "<script>window.alert(\"You must have a store name, try again!\"),location.href=\"..\userAdd.html\";</script>";
+            exit;
+        }
+        $sql = "UPDATE scudsbook_store_info SET store_rating='$_store_rating' where store_name='$_store_name'";
+        $result = mysqli_query($sql);
+        echo "Store rating updated!";
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
+    /**
+     * update store category
+     * @param $_store_name
+     * @param $_store_category
+     */
+    public function updateStoreInfo_category($_store_name, $_store_category)
+    {
+        $this->databaseConnect();
+        if ($_store_name == NULL) {
+            echo "<script>window.alert(\"You must have a store name, try again!\"),location.href=\"..\userAdd.html\";</script>";
+            exit;
+        }
+        $sql = "UPDATE scudsbook_store_info SET store_category='$_store_category' where store_name='$_store_name'";
+        $result = mysqli_query($sql);
+        echo "Store category updated!";
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
+    /**
+     * update store location
+     * @param $_store_name
+     * @param $_store_location_lat
+     * @param $_store_location_lan
+     * @param $_default_address_street
+     * @param $_default_address_ref
+     * @param $_default_address_city
+     * @param $_default_address_state
+     * @param $_default_address_zip
+     * @param $_default_address_country
+     */
+    public function updateStoreInfo_location($_store_name,$_store_location_lat, $_store_location_lan, $_default_address_street, $_default_address_ref, $_default_address_city, $_default_address_state,
+                                             $_default_address_zip, $_default_address_country)
+    {
+        $this->databaseConnect();
+        if ($_store_name == NULL) {
+            echo "<script>window.alert(\"You must have a store name, try again!\"),location.href=\"..\userAdd.html\";</script>";
+            exit;
+        }
+        $sql = "UPDATE scudsbook_store_info SET store_location_lat='$_store_location_lat', store_location_lan='$_store_location_lan',
+            default_address_street='$_default_address_street', default_address_ref='$_default_address_ref', default_address_city='$_default_address_city',
+            default_address_state='$_default_address_state', default_address_zip='$_default_address_zip', default_address_country='$_default_address_country' where store_name='$_store_name'";
+        $result = mysqli_query($sql);
+        echo "Store address updated!";
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
 }
