@@ -11,7 +11,7 @@
 
 <div id="table1">
 
-    <form action="" method=post id=addstore>
+    <form action="Database_Store_Manager.php" method=post id=addstore>
         <table cellspacing=1 cellpadding=0 width=40% align=center border=0>
             <tbody>
             <tr bgcolor=#cccccc>
@@ -58,51 +58,59 @@
             <tr>
                 <td>
                     <input type=reset name=reset value=clear>
-                    <input type=submit name=submit value=submit>
+                    <input type=submit name=submit_address id=submit_address value=submit>
                 </td>
             </tr>
             </tbody>
         </table>
-    </form>
-    <br>
-    <br>
+    <br><br>
+
     <?php
-        showStoreInfo();
+    showStoreInfo();
     ?>
 
+    <br><br>
+    <div id="delete_store" align="center">
+            <input type=text name=_delete_store id=_delete_store>
+            <input type=submit name=delete id="delete_address" value=delete>
+    </div>
+    </form>
 </div>
 
 <?php
 if ($_POST) {
-
-    $_store_name = $_POST['_store_name'];
-    $_store_rating = $_POST['_store_rating'];
-    $_store_category = $_POST['_store_category'];
-    $_default_address_street = $_POST['_default_address_street'];
-    $_default_address_city = $_POST['_default_address_city'];
-    $_default_address_state = $_POST['_default_address_state'];
-    $_default_address_zip = $_POST['_default_address_zip'];
-    $_default_address_country = $_POST['_default_address_country'];
-
     include_once('../Database/Database_Connection.php');
     $databaseConnection = new Database_Connection();
     $databaseConnection->createDatabase();
-    // get latitude, longitude and formatted address
-    $data_arr = geocode($_default_address_street . ',' . $_default_address_city . ',' . $_default_address_state . ',' . $_default_address_zip . ',' . $_default_address_country);
+    $_store_name = $_POST['_store_name'];
 
-    // if able to geocode the address
-    if ($data_arr) {
+    if (!empty($_store_name)) {
+        $_store_rating = $_POST['_store_rating'];
+        $_store_category = $_POST['_store_category'];
+        $_default_address_street = $_POST['_default_address_street'];
+        $_default_address_city = $_POST['_default_address_city'];
+        $_default_address_state = $_POST['_default_address_state'];
+        $_default_address_zip = $_POST['_default_address_zip'];
+        $_default_address_country = $_POST['_default_address_country'];
+        // get latitude, longitude and formatted address
+        $data_arr = geocode($_default_address_street . ',' . $_default_address_city . ',' . $_default_address_state . ',' . $_default_address_zip . ',' . $_default_address_country);
 
-        $latitude = $data_arr[0];
-        $longitude = $data_arr[1];
-        $formatted_address = $data_arr[2];
+        // if able to geocode the address
+        if ($data_arr) {
 
-        echo "$_default_address_country";
-        $databaseConnection->addStoreInfo($_store_name, $_store_rating, $_store_category, $latitude, $longitude, $_default_address_street, '', $_default_address_city, $_default_address_state,
-            $_default_address_zip, $_default_address_country);
-        echo"window.location.reload()"
+            $latitude = $data_arr[0];
+            $longitude = $data_arr[1];
+            $formatted_address = $data_arr[2];
+
+            $databaseConnection->addStoreInfo($_store_name, $_store_rating, $_store_category, $latitude, $longitude, $_default_address_street, '', $_default_address_city, $_default_address_state,
+                $_default_address_zip, $_default_address_country);
+            echo "<script>window.location.reload()</script>";
+        } else {
+            echo "The address does not exist, please try again!";
+        }
     } else {
-        echo "The address does not exist, please try again!";
+        $delete_store_name = $_POST['_delete_store'];
+        $databaseConnection->deletStoreInfo($delete_store_name);
     }
 }
 
@@ -167,21 +175,22 @@ function showStoreInfo()
           <th>Store Address Street</th><th>Store Address Street Ref</th><th>Store Address City</th><th>Store Address State</th><th>Store Address Zip</th>
           <th>Store Address Country</th></tr>";
     // output data of each row
-    for($x=1;$x<=count($store_info->_store_name);$x++) {
-        echo "<tr><td>".$store_info->_store_name[$x]."</td><td>".
-            $store_info->_store_rating[$x]."</td><td>".
-            $store_info->_store_category[$x]."</td><td>".
-            $store_info->_store_location_lat[$x]."</td><td>".
-            $store_info->_store_location_lan[$x]."</td><td>".
-            $store_info->_default_address_street[$x]."</td><td>".
-            $store_info->_default_address_street_ref[$x]."</td><td>".
-            $store_info->_default_address_city[$x]."</td><td>".
-            $store_info->_default_address_state[$x]."</td><td>".
-            $store_info->_default_address_zip[$x]."</td><td>".
-            $store_info->_default_address_country[$x]."</td></tr>";
+    for ($x = 1; $x <= count($store_info->_store_name); $x++) {
+        echo "<tr><td>" . $store_info->_store_name[$x] . "</td><td>" .
+            $store_info->_store_rating[$x] . "</td><td>" .
+            $store_info->_store_category[$x] . "</td><td>" .
+            $store_info->_store_location_lat[$x] . "</td><td>" .
+            $store_info->_store_location_lan[$x] . "</td><td>" .
+            $store_info->_default_address_street[$x] . "</td><td>" .
+            $store_info->_default_address_street_ref[$x] . "</td><td>" .
+            $store_info->_default_address_city[$x] . "</td><td>" .
+            $store_info->_default_address_state[$x] . "</td><td>" .
+            $store_info->_default_address_zip[$x] . "</td><td>" .
+            $store_info->_default_address_country[$x] . "</td></tr>";
     }
     echo "</table>";
 }
+
 ?>
 </body>
 </html>

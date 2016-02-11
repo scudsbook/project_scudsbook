@@ -173,7 +173,7 @@ class Database_Connection
             exit;
         }
         $sql = "UPDATE scudsbook_store_info SET store_rating='$_store_rating' where store_name='$_store_name'";
-        $result = mysqli_query($sql);
+        $result = mysqli_query($this->conn, $sql);
         echo "Store rating updated!";
         mysqli_close($this->conn);
         $this->conn_state=false;
@@ -192,7 +192,7 @@ class Database_Connection
             exit;
         }
         $sql = "UPDATE scudsbook_store_info SET store_category='$_store_category' where store_name='$_store_name'";
-        $result = mysqli_query($sql);
+        $result = mysqli_query($this->conn, $sql);
         echo "Store category updated!";
         mysqli_close($this->conn);
         $this->conn_state=false;
@@ -221,10 +221,32 @@ class Database_Connection
         $sql = "UPDATE scudsbook_store_info SET store_location_lat='$_store_location_lat', store_location_lan='$_store_location_lan',
             default_address_street='$_default_address_street', default_address_ref='$_default_address_ref', default_address_city='$_default_address_city',
             default_address_state='$_default_address_state', default_address_zip='$_default_address_zip', default_address_country='$_default_address_country' where store_name='$_store_name'";
-        $result = mysqli_query($sql);
+        $result = mysqli_query($this->conn, $sql);
         echo "Store address updated!";
         mysqli_close($this->conn);
         $this->conn_state=false;
     }
 
+    /**
+     * Delet Saved Store information
+     * @param $_store_name
+     */
+    public function deletStoreInfo($_store_name)
+    {
+        $this->databaseConnect();
+        if ($_store_name == NULL) {
+            echo "<script>window.alert(\"You must have a store name, try again!\"),location.href=\"..\userAdd.html\";</script>";
+            exit;
+        }
+        $sql = "DELETE FROM scudsbook_store_info WHERE store_name='$_store_name'";
+        $result = mysqli_query($this->conn, $sql);
+        if(!$result) {
+            echo "The Store does not exist!";
+        } else {
+            echo "The Store ".$_store_name." is deleted already!";
+        }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+        //TODO:delete not using data info
+    }
 }

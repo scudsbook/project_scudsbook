@@ -48,6 +48,9 @@ if($_POST){
         $longitude = $data_arr[1];
         $formatted_address = $data_arr[2];
 
+        include_once('../Database/Store_Information.php');
+        $store_info = new Store_Information();
+        $store_info->queryAllStoreInfo();
         ?>
 
         <!-- google map will be shown here -->
