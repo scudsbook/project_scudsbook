@@ -63,17 +63,17 @@
             </tr>
             </tbody>
         </table>
-    <br><br>
+        <br><br>
 
-    <?php
-    showStoreInfo();
-    ?>
+        <?php
+        showStoreInfo();
+        ?>
 
-    <br><br>
-    <div id="delete_store" align="center">
+        <br><br>
+        <div id="delete_store" align="center">
             <input type=text name=_delete_store id=_delete_store>
             <input type=submit name=delete id="delete_address" value=delete>
-    </div>
+        </div>
     </form>
 </div>
 
@@ -100,7 +100,6 @@ if ($_POST) {
 
             $latitude = $data_arr[0];
             $longitude = $data_arr[1];
-            $formatted_address = $data_arr[2];
 
             $databaseConnection->addStoreInfo($_store_name, $_store_rating, $_store_category, $latitude, $longitude, $_default_address_street, '', $_default_address_city, $_default_address_state,
                 $_default_address_zip, $_default_address_country);
@@ -126,33 +125,29 @@ function geocode($address)
     $address = urlencode($address);
 
     // google map geocode api url
-    $url = "http://maps.googleapis.com/maps/api/geocode/json?address={$address}";
+    $url = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDZwgb_z_wFGqrzvxbrLri_CXJRjklDoTM&address={$address}";
 
     // get the json response
     $resp_json = file_get_contents($url);
 
     // decode the json
     $resp = json_decode($resp_json, true);
-
     // response status will be 'OK', if able to geocode given address
     if ($resp['status'] == 'OK') {
 
         // get the important data
         $lati = $resp['results'][0]['geometry']['location']['lat'];
         $longi = $resp['results'][0]['geometry']['location']['lng'];
-        $formatted_address = $resp['results'][0]['formatted_address'];
 
         // verify if data is complete
-        if ($lati && $longi && $formatted_address) {
-
+        if ($lati && $longi) {
             // put the data in the array
             $data_arr = array();
 
             array_push(
                 $data_arr,
                 $lati,
-                $longi,
-                $formatted_address
+                $longi
             );
 
             return $data_arr;
@@ -166,6 +161,9 @@ function geocode($address)
     }
 }
 
+/**
+ * List all saved Store information in Manager page
+ */
 function showStoreInfo()
 {
     include_once('../Database/Store_Information.php');

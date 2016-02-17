@@ -63,7 +63,9 @@ if ($_POST) {
             };
             var latitude = <?php echo json_encode($store_info->_store_location_lat); ?>;
             var longitude = <?php echo json_encode($store_info->_store_location_lan); ?>;
-            var address_street = <?php echo json_encode($store_info->_default_address_street); ?>;
+            var store_name = <?php echo json_encode($store_info->_store_name); ?>;
+            var store_rating = <?php echo json_encode($store_info->_store_rating); ?>;
+
             max_address=<?php echo $index; ?>;
 
             map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
@@ -72,8 +74,12 @@ if ($_POST) {
                     map: map,
                     position: new google.maps.LatLng(latitude[i], longitude[i])
                 });
-                infowindow = new google.maps.InfoWindow({
-                    content: address_street[i]
+                var infowindow = new google.maps.InfoWindow({
+                    content: '<IMG BORDER="0" ALIGN="Left" SRC="../images/'+store_name[i]+'.png">'+
+                    '<table>'+'<tr>'+'<td align="center" style="font-size:24px">'+store_name[i]+'</td>'+'</tr>'
+                    +'<tr>'+'<td style="font-size:12px">Rating: '+store_rating[i]+'</td>'+'</tr>'
+                    +'<tr>'+'<td style="font-size:12px">'+'<form action="../store_page.php" method=post id=goto_store>'
+                    +'<input type=submit name=submit id=submit value="Go to store!">'+'</form>'+'</td>'+'</tr>'+'</table>'
                 });
                 google.maps.event.addListener(marker, "click", function () {
                     infowindow.open(map, marker);
