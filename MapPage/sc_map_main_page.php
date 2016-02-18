@@ -79,6 +79,7 @@ if ($_POST) {
                     '<table>'+'<tr>'+'<td align="center" style="font-size:24px">'+store_name[i]+'</td>'+'</tr>'
                     +'<tr>'+'<td style="font-size:12px">Rating: '+store_rating[i]+'</td>'+'</tr>'
                     +'<tr>'+'<td style="font-size:12px">'+'<form action="../store_page.php" method=post id=goto_store>'
+                    +'<input type="hidden" name="store_name" value='+store_name[i]+'>'
                     +'<input type=submit name=submit id=submit value="Go to store!">'+'</form>'+'</td>'+'</tr>'+'</table>'
                 });
                 google.maps.event.addListener(marker, "click", function () {
