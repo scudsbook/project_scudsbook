@@ -2,21 +2,29 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="scudsbook.css">
+    <link rel="stylesheet" type="text/css" href="store_page.css">
     <title>Scudsbook</title>
 </head>
 
 <body>
-<nav>
-    <ul>
-        <li class="navbar"><a href="Database/Database_Store_Manager.php">Admin</a></li>
-        <li class="navbar"><a href="log_in.html">Log in</a></li>
-        <li class="navbar"><a href="cart.html">Cart</a></li>
-    </ul>
-</nav>
+<?php include("navbar.html");?>
+<div class="container">
+    <u1>
+        <li class="item_container col-3">
+            <div class="item_img">
+                <img src="" alt="" height="" width="">
+            </div>
+            <div class="item_text">
+                <p>
+                    price<br>
+                    product_name
+                </p>
+            </div>
+            <buttton type="submit" id="item_add">+add</buttton>
+        </li>
+    </u1>
+</div>
 
-</body>
-</html>
 
 <?php
 /**
