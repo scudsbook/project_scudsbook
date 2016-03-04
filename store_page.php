@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="store_page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="scudsbook.css">
     <title>Scudsbook</title>
 </head>
 

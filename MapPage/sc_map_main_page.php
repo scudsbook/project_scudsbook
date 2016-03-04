@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../scudsbook.css">
 
     <title>Scudsbook</title>
 
@@ -31,6 +33,14 @@
 
 </head>
 <body>
+
+<nav>
+    <ul>
+        <li class="navbar"><a href="Database/Database_Store_Manager.php">Admin</a></li>
+        <li class="navbar"><a href="log_in.html">Log in</a></li>
+        <li class="navbar"><a href="cart.html">Cart</a></li>
+    </ul>
+</nav>
 
 <?php
 if ($_POST) {
