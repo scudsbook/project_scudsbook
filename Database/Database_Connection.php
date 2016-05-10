@@ -8,9 +8,15 @@
  */
 class Database_Connection
 {
-    public $_database_name = 'scudsbook';
+    public $_database_name = 'scudsboo_chenye';
     public $conn;
     public $conn_state;
+
+    private $_security_key = "1z9kdjhekjndfhjahfuerhianfkjfnakheuroaihn";
+    public $_error_security_fail = "error_security_fail";
+    public $_error_mobile_data = "error_mobile_data";
+    public $_result_account_exist = "result_account_exist";
+    public $_result_account_login = "result_account_login";
 
     /**
      * Set up database connection
@@ -18,8 +24,8 @@ class Database_Connection
     public function databaseConnect()
     {
         $servername = "localhost";
-        $username = "chenye2016";
-        $password = "chenye2016";
+        $username = "scudsboo_chenye";
+        $password = "chenye";
 
         // Create connection
         $this->conn = new mysqli($servername, $username, $password);
@@ -107,11 +113,54 @@ class Database_Connection
             echo "<script>window.alert(\"password and confirm not same, try again!\"),location.href=\"..\userAdd.html\";</script>";
             exit;
         } else {
-            $sql = "INSERT INTO userInfo(userName, password,password_re, address_street, address_ref, address_city, address_state, address_zip, address_country,
+            $sql = "INSERT INTO scudsbook_user_information(userName, password,password_re, address_street, address_ref, address_city, address_state, address_zip, address_country,
                  user_boa, user_phone) VALUES('$_userName', '$_password','$_password_re', '$_address_street', '$_address_ref', '$_address_city', '$_address_state',
                  '$_address_zip', '$_address_country', '$_user_boa', '$_user_phone');";
-            $result = mysqli_query($sql);
+            $result = mysqli_query($this->conn, $sql);
             echo "<script>window.alert(\"User Added!\"),location.href=\"userLogin.html\";</script>";
+        }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
+    /**
+     * Added new user information
+     * @param $_userName
+     * @param $_password
+     * @param $_password_re
+     * @param $_address_street
+     * @param $_address_ref
+     * @param $_address_city
+     * @param $_address_state
+     * @param $_address_zip
+     * @param $_address_country
+     * @param $_user_boa
+     * @param $_user_phone
+     */
+    public function logInFromMobile($key, $_userName, $_password, $_password_re,
+                                    $_address_street, $_address_ref, $_address_city, $_address_state, $_address_zip, $_address_country, $_user_boa, $_user_phone)
+    {
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        if ($_userName == NULL||$_password == NULL) {
+            echo $this->_error_mobile_data;
+            exit;
+        }
+        $sql = "SELECT * FROM scudsbook_user_information WHERE userName='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            echo $this->_result_account_exist.",".$result->fetch_assoc()['password'];
+            exit;
+        } else {
+            $sql = "INSERT INTO scudsbook_user_information(userName, password,password_re, address_street, address_ref, address_city, address_state, address_zip, address_country,
+                 user_boa, user_phone) VALUES('$_userName', '$_password','$_password_re', '$_address_street', '$_address_ref', '$_address_city', '$_address_state',
+                 '$_address_zip', '$_address_country', '$_user_boa', '$_user_phone');";
+            $result = mysqli_query($this->conn, $sql);
+            echo $this->_result_account_login;
         }
         mysqli_close($this->conn);
         $this->conn_state=false;
