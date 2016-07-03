@@ -68,6 +68,14 @@ class Database_Connection
                                 store_location_lat varchar(20) NOT NULL, store_location_lan varchar(20) ,address_street varchar(100), address_ref varchar(50),
                                 address_city varchar(50),address_state char(50), address_zip varchar(30), address_country char(50))");
             }
+            $scudsbook_loc = mysqli_query($this->conn, "describe user_location_info");
+            if (!$scudsbook_loc) {
+                mysqli_query($this->conn, "create table user_location_info(userName varchar(100) primary key NOT NULL, user_lat VARCHAR (50), user_lan VARCHAR (50))");
+            }
+            $scudsbook_admin = mysqli_query($this->conn, "describe admin_user");
+            if (!$scudsbook_admin) {
+                mysqli_query($this->conn, "create table admin_user(userName varchar(100) primary key NOT NULL)");
+            }
             mysqli_close($this->conn);
             $this->conn_state=false;
         }
@@ -154,16 +162,98 @@ class Database_Connection
         $rows = mysqli_num_rows($result);
         if ($rows) {
             echo $this->_result_account_exist.",".$result->fetch_assoc()['password'];
+            if ($_userName == 'admin@scudsbook.com') {
+                $sql = "INSERT INTO admin_user(userName) VALUES('$_userName');";
+                $result = mysqli_query($this->conn, $sql);
+            }
             exit;
         } else {
             $sql = "INSERT INTO scudsbook_user_information(userName, password,password_re, address_street, address_ref, address_city, address_state, address_zip, address_country,
                  user_boa, user_phone) VALUES('$_userName', '$_password','$_password_re', '$_address_street', '$_address_ref', '$_address_city', '$_address_state',
                  '$_address_zip', '$_address_country', '$_user_boa', '$_user_phone');";
             $result = mysqli_query($this->conn, $sql);
+            if ($_userName == 'admin@scudsbook.com') {
+                $sql = "INSERT INTO admin_user(userName) VALUES('$_userName');";
+                $result = mysqli_query($this->conn, $sql);
+            }
             echo $this->_result_account_login;
         }
         mysqli_close($this->conn);
         $this->conn_state=false;
+    }
+
+    /**
+     * @param $key
+     * @param $_userName
+     * @param $_lat
+     * @param $_lan
+     */
+    public function userLocationUpdate($key, $_userName, $_lat, $_lan) {
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        if ($_userName == NULL) {
+            echo $this->_error_mobile_data;
+            exit;
+        }
+        $sql = "SELECT * FROM user_location_info WHERE userName='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $sql = "UPDATE user_location_info SET user_lat='$_lat' where user_lan='$_lan'";
+            $result = mysqli_query($this->conn, $sql);
+            echo "user location updated!";
+        } else {
+            $sql = "INSERT INTO user_location_info(userName, user_lat,user_lan) VALUES('$_userName', '$_lat','$_lan');";
+            $result = mysqli_query($this->conn, $sql);
+            echo $this->_result_account_login;
+            echo "user location updated!";
+        }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
+    /**
+     * @param $key
+     * @param $_userName
+     */
+    public function queryAmdin($key, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from admin_user WHERE userName='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            echo "admin_key";
+        } else {
+            echo "non_admin_key";
+        }
+    }
+
+    /**
+     * @param $key
+     * @param $_userName
+     */
+    public function queryAddress($key, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from user_location_info WHERE userName='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $loc = $result->fetch_assoc();
+            echo $loc[user_lat].','.$loc[user_lan];
+        } else {
+            echo "error:no_user";
+        }
     }
 
     /**
