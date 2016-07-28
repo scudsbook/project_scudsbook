@@ -8,7 +8,7 @@
  */
 class Database_Connection
 {
-    public $_database_name = 'scudsboo_chenye';
+    public $_database_name = 'scudsbo2_db';
     public $conn;
     public $conn_state;
 
@@ -24,7 +24,7 @@ class Database_Connection
     public function databaseConnect()
     {
         $servername = "localhost";
-        $username = "scudsboo_chenye";
+        $username = "scudsbo2_chenye";
         $password = "chenye";
 
         // Create connection
@@ -75,6 +75,12 @@ class Database_Connection
             $scudsbook_admin = mysqli_query($this->conn, "describe admin_user");
             if (!$scudsbook_admin) {
                 mysqli_query($this->conn, "create table admin_user(userName varchar(100) primary key NOT NULL)");
+            }
+            $scudsbook_order_info = mysqli_query($this->conn, "describe scudsbook_order_info");
+            if (!$scudsbook_order_info) {
+                mysqli_query($this->conn, "create table scudsbook_order_info(order_id VARCHAR (20) primary key NOT NULL, order_customer_name VARCHAR(50), order_customer_phone VARCHAR (20),
+                    order_distance VARCHAR (20), order_address VARCHAR (100), order_city VARCHAR (50), order_state VARCHAR (50), order_zip VARCHAR (20), order_product_cost VARCHAR (20), order_deliver_fee VARCHAR (20),
+                    order_tip VARCHAR (20), order_total VARCHAR (20), order_deliver_by VARCHAR (50), order_summary VARCHAR (500), order_time VARCHAR (30), order_submitted_by VARCHAR (30))");
             }
             mysqli_close($this->conn);
             $this->conn_state=false;
@@ -202,14 +208,46 @@ class Database_Connection
         $result = mysqli_query($this->conn, $sql);
         $rows = mysqli_num_rows($result);
         if ($rows) {
-            $sql = "UPDATE user_location_info SET user_lat='$_lat' where user_lan='$_lan'";
+            $sql = "UPDATE user_location_info SET user_lat='$_lat', user_lan='$_lan' where userName='$_userName'";
             $result = mysqli_query($this->conn, $sql);
             echo "user location updated!";
         } else {
             $sql = "INSERT INTO user_location_info(userName, user_lat,user_lan) VALUES('$_userName', '$_lat','$_lan');";
             $result = mysqli_query($this->conn, $sql);
-            echo $this->_result_account_login;
+            //echo $this->_result_account_login;
             echo "user location updated!";
+        }
+        mysqli_close($this->conn);
+        $this->conn_state=false;
+    }
+
+    public function orderInfoUpdate($key, $_userName, $order_id, $order_customer_name, $order_customer_phone,
+                    $order_distance, $order_address, $order_city, $order_state, $order_zip, $order_product_cost, $order_deliver_fee,
+                    $order_tip, $order_total, $order_deliver_by, $order_summary, $order_time) {
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        if ($_userName == NULL) {
+            echo $this->_error_mobile_data;
+            exit;
+        }
+        $sql = "SELECT * FROM scudsbook_order_info WHERE order_id='$order_id'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $sql = "UPDATE scudsbook_order_info SET order_customer_name='$order_customer_name', order_customer_phone='$order_customer_phone', order_distance='$order_distance',
+                    order_address='$order_address', order_city='$order_city', order_state='$order_state', order_zip='$order_zip', order_product_cost='$order_product_cost',
+                    order_deliver_fee='$order_deliver_fee', order_tip='$order_tip', order_total='$order_total', order_deliver_by='$order_deliver_by', order_summary='$order_summary', order_time='$order_time', order_submitted_by='$_userName' where order_id='$order_id'";
+            $result = mysqli_query($this->conn, $sql);
+            echo "order info updated!";
+        } else {
+            $sql = "INSERT INTO scudsbook_order_info(order_id,order_customer_name,order_customer_phone,order_distance,order_address,order_city,order_state,order_zip,order_product_cost,
+                  order_deliver_fee,order_tip,order_total,order_deliver_by,order_summary,order_time,order_submitted_by) VALUES('$order_id', '$order_customer_name','$order_customer_phone','$order_distance',
+                  '$order_address','$order_city','$order_state','$order_zip','$order_product_cost','$order_deliver_fee','$order_tip','$order_total','$order_deliver_by','$order_summary','$order_time','$_userName');";
+            $result = mysqli_query($this->conn, $sql);
+            echo "order info updated!";
         }
         mysqli_close($this->conn);
         $this->conn_state=false;
@@ -250,7 +288,56 @@ class Database_Connection
         $rows = mysqli_num_rows($result);
         if ($rows) {
             $loc = $result->fetch_assoc();
-            echo $loc[user_lat].','.$loc[user_lan];
+            echo $loc['user_lat'].','.$loc['user_lan'];
+        } else {
+            echo "error:no_user";
+        }
+    }
+
+    /**
+     * @param $key
+     * @param $order_id
+     */
+    public function queryOrderInfo($key, $order_id, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from scudsbook_order_info WHERE order_id='$order_id',order_submitted_by='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $info = $result->fetch_assoc();
+            echo $info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
+                .';'.$info['order_state'].';'.$info['order_zip'].';'.$info['order_product_cost'].';'.$info['order_deliver_fee'].';'.$info['order_tip'].';'.$info['order_total'].';'.$info['order_deliver_by']
+                .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'];
+        } else {
+            echo "error:no_user";
+        }
+    }
+
+    /**
+     * @param $key
+     * @param $order_id
+     */
+    public function queryOrderInfoList($key, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from scudsbook_order_info WHERE order_submitted_by='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        $list = '';
+        if ($rows) {
+            while($info = $result->fetch_assoc()) {
+                $list = $list.$info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
+                    .';'.$info['order_state'].';'.$info['order_zip'].';'.$info['order_product_cost'].';'.$info['order_deliver_fee'].';'.$info['order_tip'].';'.$info['order_total'].';'.$info['order_deliver_by']
+                    .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'].'}';
+            }
+            echo $list;
         } else {
             echo "error:no_user";
         }
