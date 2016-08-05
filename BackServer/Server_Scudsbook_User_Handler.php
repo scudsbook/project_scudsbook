@@ -69,6 +69,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_key = $_POST['_key_scudsbook'];
         $_user_name = $_POST['_user_name'];
         $databaseConnection->queryOrderInfoList($_key, $_user_name);
+    }  else if($_key_type == $_type_deliver_order_info_query) {
+        $_key = $_POST['_key_scudsbook'];
+        $order_id = $_POST['key_order_info_id'];
+        $_user_name = $_POST['_user_name'];
+        $databaseConnection->queryOrderInfoDeliver($_key, $order_id, $_user_name);
+    }  else if($_key_type == $_type_deliver_order_info_list_query) {
+        $_key = $_POST['_key_scudsbook'];
+        $_user_name = $_POST['_user_name'];
+        $databaseConnection->queryOrderInfoListDeliver($_key, $_user_name);
     } else {
         echo "error!";
     }

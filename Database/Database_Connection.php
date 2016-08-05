@@ -304,7 +304,26 @@ class Database_Connection
             exit;
         }
         $this->databaseConnect();
-        $sql = "select * from scudsbook_order_info WHERE order_id='$order_id',order_submitted_by='$_userName'";
+        $sql = "select * from scudsbook_order_info WHERE order_submitted_by='$_userName' AND order_id='$order_id'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $info = $result->fetch_assoc();
+            echo $info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
+                .';'.$info['order_state'].';'.$info['order_zip'].';'.$info['order_product_cost'].';'.$info['order_deliver_fee'].';'.$info['order_tip'].';'.$info['order_total'].';'.$info['order_deliver_by']
+                .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'];
+        } else {
+            echo "error:no_user";
+        }
+    }
+
+    public function queryOrderInfoDeliver($key, $order_id, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from scudsbook_order_info WHERE order_deliver_by='$_userName' AND order_id='$order_id'";
         $result = mysqli_query($this->conn, $sql);
         $rows = mysqli_num_rows($result);
         if ($rows) {
@@ -341,6 +360,36 @@ class Database_Connection
         } else {
             echo "error:no_user";
         }
+    }
+
+    public function queryOrderInfoListDeliver ($key, $_userName){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from order_deliver_by WHERE order_submitted_by='not_set'";
+        $sql2 = "select * from order_deliver_by WHERE order_submitted_by='$_userName'";
+        $result = mysqli_query($this->conn, $sql);
+        $result2 = mysqli_query($this->conn, $sql2);
+        $rows = mysqli_num_rows($result);
+        $rows2 = mysqli_num_rows($result2);
+        $list = '';
+        if ($rows) {
+            while($info = $result->fetch_assoc()) {
+                $list = $list.$info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
+                    .';'.$info['order_state'].';'.$info['order_zip'].';'.$info['order_product_cost'].';'.$info['order_deliver_fee'].';'.$info['order_tip'].';'.$info['order_total'].';'.$info['order_deliver_by']
+                    .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'].'}';
+            }
+        }
+        if ($rows2) {
+            while($info = $result2->fetch_assoc()) {
+                $list = $list.$info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
+                    .';'.$info['order_state'].';'.$info['order_zip'].';'.$info['order_product_cost'].';'.$info['order_deliver_fee'].';'.$info['order_tip'].';'.$info['order_total'].';'.$info['order_deliver_by']
+                    .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'].'}';
+            }
+        }
+        echo $list;
     }
 
     /**
