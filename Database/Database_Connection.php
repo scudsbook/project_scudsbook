@@ -239,7 +239,7 @@ class Database_Connection
         if ($rows) {
             $sql = "UPDATE scudsbook_order_info SET order_customer_name='$order_customer_name', order_customer_phone='$order_customer_phone', order_distance='$order_distance',
                     order_address='$order_address', order_city='$order_city', order_state='$order_state', order_zip='$order_zip', order_product_cost='$order_product_cost',
-                    order_deliver_fee='$order_deliver_fee', order_tip='$order_tip', order_total='$order_total', order_deliver_by='$order_deliver_by', order_summary='$order_summary', order_time='$order_time', order_submitted_by='$_userName' where order_id='$order_id'";
+                    order_deliver_fee='$order_deliver_fee', order_tip='$order_tip', order_total='$order_total', order_deliver_by='$order_deliver_by', order_summary='$order_summary', order_time='$order_time', order_submitted_by='$_userName' where order_submitted_by='$_userName' AND order_id='$order_id'";
             $result = mysqli_query($this->conn, $sql);
             echo "order info updated!";
         } else {
@@ -251,6 +251,52 @@ class Database_Connection
         }
         mysqli_close($this->conn);
         $this->conn_state=false;
+    }
+
+    public function orderInfoUpdateDeliver ($key, $_userName, $order_id, $deliver_by) {
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        if ($_userName == NULL) {
+            echo $this->_error_mobile_data;
+            exit;
+        }
+        $sql = "SELECT * FROM scudsbook_order_info WHERE order_submitted_by='$_userName' AND order_id='$order_id'";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        if ($rows) {
+            $info = $result->fetch_assoc();
+            if ($info['order_deliver_by'] != 'not_set') {
+                $sql = "UPDATE scudsbook_order_info SET order_deliver_by='$deliver_by' where order_submitted_by='$_userName' AND order_id='$order_id'";
+                $result = mysqli_query($this->conn, $sql);
+                echo "order info updated!";
+            }
+        }
+    }
+
+    /**
+     * @param $key
+     */
+    public function queryUserList($key){
+        if($key != $this->_security_key) {
+            echo $this->_error_security_fail;
+            exit;
+        }
+        $this->databaseConnect();
+        $sql = "select * from scudsbook_user_information";
+        $result = mysqli_query($this->conn, $sql);
+        $rows = mysqli_num_rows($result);
+        $list = '';
+        if ($rows) {
+            while($info = $result->fetch_assoc()) {
+                $list = $list.$info['userName'].';';
+            }
+            echo $list;
+        } else {
+            echo "error:no_user";
+        }
     }
 
     /**
