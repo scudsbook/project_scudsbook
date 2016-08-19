@@ -369,7 +369,7 @@ class Database_Connection
             exit;
         }
         $this->databaseConnect();
-        $sql = "select * from scudsbook_order_info WHERE order_deliver_by='$_userName' AND order_id='$order_id'";
+        $sql = "select * from scudsbook_order_info WHERE order_submitted_by='$_userName' AND order_id='$order_id'";
         $result = mysqli_query($this->conn, $sql);
         $rows = mysqli_num_rows($result);
         if ($rows) {
@@ -414,12 +414,11 @@ class Database_Connection
             exit;
         }
         $this->databaseConnect();
-        $sql = "select * from order_deliver_by WHERE order_submitted_by='not_set'";
-        $sql2 = "select * from order_deliver_by WHERE order_submitted_by='$_userName'";
+        $sql = "select * from scudsbook_order_info WHERE order_deliver_by='not_set'";
+        $sql2 = "select * from scudsbook_order_info WHERE order_submitted_by='$_userName'";
         $result = mysqli_query($this->conn, $sql);
         $result2 = mysqli_query($this->conn, $sql2);
         $rows = mysqli_num_rows($result);
-        $rows2 = mysqli_num_rows($result2);
         $list = '';
         if ($rows) {
             while($info = $result->fetch_assoc()) {
@@ -428,6 +427,7 @@ class Database_Connection
                     .';'.$info['order_summary'].';'.$info['order_time'].';'.$info['order_submitted_by'].'}';
             }
         }
+        $rows2 = mysqli_num_rows($result2);
         if ($rows2) {
             while($info = $result2->fetch_assoc()) {
                 $list = $list.$info['order_id'].';'.$info['order_customer_name'].';'.$info['order_customer_phone'].';'.$info['order_distance'].';'.$info['order_address'].';'.$info['order_city']
