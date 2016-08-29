@@ -268,10 +268,12 @@ class Database_Connection
         $rows = mysqli_num_rows($result);
         if ($rows) {
             $info = $result->fetch_assoc();
-            if ($info['order_deliver_by'] != 'not_set') {
+            if ($info['order_deliver_by'] == 'not_set') {
                 $sql = "UPDATE scudsbook_order_info SET order_deliver_by='$deliver_by' where order_submitted_by='$_userName' AND order_id='$order_id'";
                 $result = mysqli_query($this->conn, $sql);
                 echo "order info updated!";
+            } else {
+                echo "deliver set already!";
             }
         }
     }
@@ -414,8 +416,8 @@ class Database_Connection
             exit;
         }
         $this->databaseConnect();
-        $sql = "select * from scudsbook_order_info WHERE order_deliver_by='not_set'";
-        $sql2 = "select * from scudsbook_order_info WHERE order_submitted_by='$_userName'";
+        $sql = "select * from scudsbook_order_info WHERE order_deliver_by='$_userName'";
+        $sql2 = "select * from scudsbook_order_info WHERE order_deliver_by='not_set'";
         $result = mysqli_query($this->conn, $sql);
         $result2 = mysqli_query($this->conn, $sql2);
         $rows = mysqli_num_rows($result);

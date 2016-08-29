@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abc2c82-8a9d-48f3-8eed-3019b9ab5d06" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Database_Connection.php" afterPath="$PROJECT_DIR$/Database/Database_Connection.php" />
     </list>
     <ignored path="project_scudsbook.iws" />
@@ -28,50 +27,50 @@
       <file leaf-file-name="Database_Connection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Database/Database_Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="365" column="20" selection-start-line="365" selection-start-column="20" selection-end-line="365" selection-end-column="20" />
+            <state vertical-scroll-proportion="7.0934258">
+              <caret line="410" column="5" selection-start-line="410" selection-start-column="5" selection-end-line="410" selection-end-column="5" />
               <folding>
-                <marker date="1471642727037" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
-                <marker date="1471642727037" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
-                <marker date="1471642727037" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
-                <marker date="1471642727037" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
-                <marker date="1471642727037" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
-                <marker date="1471642727037" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
-                <marker date="1471642727037" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
-                <marker date="1471642727037" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
-                <marker date="1471642727037" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
-                <marker date="1471642727037" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
-                <marker date="1471642727037" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
-                <marker date="1471642727037" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
-                <marker date="1471642727037" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
-                <marker date="1471642727037" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
-                <marker date="1471642727037" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
-                <marker date="1471642727037" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
-                <marker date="1471642727037" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
-                <marker date="1471642727037" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
-                <marker date="1471642727037" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
-                <marker date="1471642727037" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
-                <marker date="1471642727037" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
-                <marker date="1471642727037" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
-                <marker date="1471642727037" expanded="true" signature="13533:13573" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="14198:14222" placeholder="select * fro... admin_user" />
-                <marker date="1471642727037" expanded="true" signature="14198:14250" placeholder="select * fro... admin_user" />
-                <marker date="1471642727037" expanded="true" signature="14744:14804" placeholder="select * fro... admin_user" />
-                <marker date="1471642727037" expanded="true" signature="15379:15419" placeholder="select * fro... user_location_info" />
-                <marker date="1471642727037" expanded="true" signature="15379:15438" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="15379:15451" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="15379:15476" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="16432:16529" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="17530:17602" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="18643:18710" placeholder="select * fro... scudsbook_order_info" />
-                <marker date="1471642727037" expanded="true" signature="18730:18802" placeholder="select * fro... order_deliver_by" />
-                <marker date="1471642727037" expanded="true" signature="21255:21321" placeholder="SELECT * FRO... scudsbook_store_info" />
-                <marker date="1471642727037" expanded="true" signature="21570:22119" placeholder="INSERT INTO scudsbook_store_info... " />
-                <marker date="1471642727037" expanded="true" signature="22769:22862" placeholder="UPDATE scuds... " />
-                <marker date="1471642727037" expanded="true" signature="23458:23555" placeholder="UPDATE scuds... " />
-                <marker date="1471642727037" expanded="true" signature="24636:25098" placeholder="UPDATE scuds... " />
-                <marker date="1471642727037" expanded="true" signature="25644:25708" placeholder="DELETE FROM " />
+                <marker date="1471902721707" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
+                <marker date="1471902721707" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
+                <marker date="1471902721707" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
+                <marker date="1471902721707" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
+                <marker date="1471902721707" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
+                <marker date="1471902721707" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
+                <marker date="1471902721707" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
+                <marker date="1471902721707" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
+                <marker date="1471902721707" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
+                <marker date="1471902721707" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
+                <marker date="1471902721707" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
+                <marker date="1471902721707" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
+                <marker date="1471902721707" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
+                <marker date="1471902721707" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
+                <marker date="1471902721707" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
+                <marker date="1471902721707" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
+                <marker date="1471902721707" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
+                <marker date="1471902721707" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
+                <marker date="1471902721707" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
+                <marker date="1471902721707" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
+                <marker date="1471902721707" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
+                <marker date="1471902721707" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
+                <marker date="1471902721707" expanded="true" signature="13599:13639" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="14264:14288" placeholder="select * fro... admin_user" />
+                <marker date="1471902721707" expanded="true" signature="14264:14316" placeholder="select * fro... admin_user" />
+                <marker date="1471902721707" expanded="true" signature="14810:14870" placeholder="select * fro... admin_user" />
+                <marker date="1471902721707" expanded="true" signature="15445:15485" placeholder="select * fro... user_location_info" />
+                <marker date="1471902721707" expanded="true" signature="15445:15504" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="15445:15517" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="15445:15542" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="16498:16595" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="17596:17668" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="18709:18779" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="18799:18866" placeholder="select * fro... scudsbook_order_info" />
+                <marker date="1471902721707" expanded="true" signature="21319:21385" placeholder="SELECT * FRO... scudsbook_store_info" />
+                <marker date="1471902721707" expanded="true" signature="21634:22183" placeholder="INSERT INTO scudsbook_store_info... " />
+                <marker date="1471902721707" expanded="true" signature="22833:22926" placeholder="UPDATE scuds... " />
+                <marker date="1471902721707" expanded="true" signature="23522:23619" placeholder="UPDATE scuds... " />
+                <marker date="1471902721707" expanded="true" signature="24700:25162" placeholder="UPDATE scuds... " />
+                <marker date="1471902721707" expanded="true" signature="25708:25772" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -142,8 +141,8 @@
       <file leaf-file-name="Server_Scudsbook_User_Handler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackServer/Server_Scudsbook_User_Handler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.490909">
-              <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+            <state vertical-scroll-proportion="-12.218182">
+              <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -422,7 +421,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24705882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -469,47 +468,47 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1471642727037" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="13533:13573" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="14198:14222" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14198:14250" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14744:14804" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="15379:15419" placeholder="select * fro... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15438" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15451" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15476" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="16432:16529" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="17530:17602" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18643:18710" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18730:18802" placeholder="select * fro... order_deliver_by" />
-            <marker date="1471642727037" expanded="true" signature="21255:21321" placeholder="SELECT * FRO... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="21570:22119" placeholder="INSERT INTO scudsbook_store_info... " />
-            <marker date="1471642727037" expanded="true" signature="22769:22862" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="23458:23555" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="24636:25098" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="25644:25708" placeholder="DELETE FROM " />
+            <marker date="1471902721707" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="13599:13639" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="14264:14288" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14264:14316" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14810:14870" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="15445:15485" placeholder="select * fro... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15504" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15517" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15542" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="16498:16595" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="17596:17668" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18709:18779" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18799:18866" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="21319:21385" placeholder="SELECT * FRO... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="21634:22183" placeholder="INSERT INTO scudsbook_store_info... " />
+            <marker date="1471902721707" expanded="true" signature="22833:22926" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="23522:23619" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="24700:25162" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="25708:25772" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -649,47 +648,47 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="33" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="33" />
           <folding>
-            <marker date="1471642727037" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="13533:13573" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="14198:14222" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14198:14250" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14744:14804" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="15379:15419" placeholder="select * fro... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15438" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15451" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15476" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="16432:16529" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="17530:17602" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18643:18710" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18730:18802" placeholder="select * fro... order_deliver_by" />
-            <marker date="1471642727037" expanded="true" signature="21255:21321" placeholder="SELECT * FRO... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="21570:22119" placeholder="INSERT INTO scudsbook_store_info... " />
-            <marker date="1471642727037" expanded="true" signature="22769:22862" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="23458:23555" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="24636:25098" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="25644:25708" placeholder="DELETE FROM " />
+            <marker date="1471902721707" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="13599:13639" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="14264:14288" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14264:14316" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14810:14870" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="15445:15485" placeholder="select * fro... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15504" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15517" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15542" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="16498:16595" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="17596:17668" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18709:18779" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18799:18866" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="21319:21385" placeholder="SELECT * FRO... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="21634:22183" placeholder="INSERT INTO scudsbook_store_info... " />
+            <marker date="1471902721707" expanded="true" signature="22833:22926" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="23522:23619" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="24700:25162" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="25708:25772" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -733,47 +732,47 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1471642727037" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="13533:13573" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="14198:14222" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14198:14250" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14744:14804" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="15379:15419" placeholder="select * fro... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15438" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15451" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15476" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="16432:16529" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="17530:17602" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18643:18710" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18730:18802" placeholder="select * fro... order_deliver_by" />
-            <marker date="1471642727037" expanded="true" signature="21255:21321" placeholder="SELECT * FRO... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="21570:22119" placeholder="INSERT INTO scudsbook_store_info... " />
-            <marker date="1471642727037" expanded="true" signature="22769:22862" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="23458:23555" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="24636:25098" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="25644:25708" placeholder="DELETE FROM " />
+            <marker date="1471902721707" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="13599:13639" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="14264:14288" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14264:14316" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14810:14870" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="15445:15485" placeholder="select * fro... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15504" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15517" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15542" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="16498:16595" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="17596:17668" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18709:18779" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18799:18866" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="21319:21385" placeholder="SELECT * FRO... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="21634:22183" placeholder="INSERT INTO scudsbook_store_info... " />
+            <marker date="1471902721707" expanded="true" signature="22833:22926" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="23522:23619" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="24700:25162" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="25708:25772" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -920,58 +919,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BackServer/Server_Scudsbook_User_Handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.490909">
-          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+        <state vertical-scroll-proportion="-12.218182">
+          <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Database/Database_Connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="365" column="20" selection-start-line="365" selection-start-column="20" selection-end-line="365" selection-end-column="20" />
+        <state vertical-scroll-proportion="7.0934258">
+          <caret line="410" column="5" selection-start-line="410" selection-start-column="5" selection-end-line="410" selection-end-column="5" />
           <folding>
-            <marker date="1471642727037" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
-            <marker date="1471642727037" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
-            <marker date="1471642727037" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
-            <marker date="1471642727037" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
-            <marker date="1471642727037" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
-            <marker date="1471642727037" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="13533:13573" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="14198:14222" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14198:14250" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="14744:14804" placeholder="select * fro... admin_user" />
-            <marker date="1471642727037" expanded="true" signature="15379:15419" placeholder="select * fro... user_location_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15438" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15451" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="15379:15476" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="16432:16529" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="17530:17602" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18643:18710" placeholder="select * fro... scudsbook_order_info" />
-            <marker date="1471642727037" expanded="true" signature="18730:18802" placeholder="select * fro... order_deliver_by" />
-            <marker date="1471642727037" expanded="true" signature="21255:21321" placeholder="SELECT * FRO... scudsbook_store_info" />
-            <marker date="1471642727037" expanded="true" signature="21570:22119" placeholder="INSERT INTO scudsbook_store_info... " />
-            <marker date="1471642727037" expanded="true" signature="22769:22862" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="23458:23555" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="24636:25098" placeholder="UPDATE scuds... " />
-            <marker date="1471642727037" expanded="true" signature="25644:25708" placeholder="DELETE FROM " />
+            <marker date="1471902721707" expanded="true" signature="1767:2156" placeholder="create table... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="2355:2779" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="2962:3083" placeholder="create table... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3307" placeholder="create table... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="3262:3329" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="3528:4079" placeholder="create table... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="5096:5164" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="5885:6292" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="7437:7505" placeholder="SELECT * FRO... scudsbook_user_information" />
+            <marker date="1471902721707" expanded="true" signature="7787:7840" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="7972:8379" placeholder="INSERT INTO scudsbook_user_information... " />
+            <marker date="1471902721707" expanded="true" signature="8517:8570" placeholder="INSERT INTO admin_user... " />
+            <marker date="1471902721707" expanded="true" signature="9225:9285" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="9422:9492" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9493" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9422:9514" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9749" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="9652:9750" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="10597:10658" placeholder="SELECT * FRO... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="10795:11425" placeholder="UPDATE user_... " />
+            <marker date="1471902721707" expanded="true" signature="11560:12143" placeholder="INSERT INTO user_location_info... " />
+            <marker date="1471902721707" expanded="true" signature="12688:12785" placeholder="SELECT * FRO... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="13028:13153" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="13599:13639" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="14264:14288" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14264:14316" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="14810:14870" placeholder="select * fro... admin_user" />
+            <marker date="1471902721707" expanded="true" signature="15445:15485" placeholder="select * fro... user_location_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15504" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15517" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="15445:15542" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="16498:16595" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="17596:17668" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18709:18779" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="18799:18866" placeholder="select * fro... scudsbook_order_info" />
+            <marker date="1471902721707" expanded="true" signature="21319:21385" placeholder="SELECT * FRO... scudsbook_store_info" />
+            <marker date="1471902721707" expanded="true" signature="21634:22183" placeholder="INSERT INTO scudsbook_store_info... " />
+            <marker date="1471902721707" expanded="true" signature="22833:22926" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="23522:23619" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="24700:25162" placeholder="UPDATE scuds... " />
+            <marker date="1471902721707" expanded="true" signature="25708:25772" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
